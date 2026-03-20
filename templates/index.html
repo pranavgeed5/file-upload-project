@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>📁 File Upload System</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h3>Uploaded Files</h3>
+
+    <div class="files">
+        {% for file in files %}
+            <div class="file">
+                <a href="/uploads/{{file}}" target="_blank">{{file}}</a>
+
+                {% if file.endswith(('png','jpg','jpeg','gif')) %}
+                    <img src="/uploads/{{file}}" width="150">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
