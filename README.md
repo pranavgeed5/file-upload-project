@@ -1,30 +1,33 @@
-File Upload System
+---
+
+# File Upload System
 
 A simple Flask-based File Upload System that allows users to upload, validate, and preview files such as images, PDFs, and text documents through a clean web interface.
 
-Features
+---
 
-Upload files (images, PDF, text)
+## Features
 
-File type validation for security
+* Upload files (images, PDF, text)
+* File type validation for security
+* Image preview support
+* View uploaded files
+* Clean and simple user interface
+* Deployable on Render
 
-Image preview support
+---
 
-View uploaded files
+## Tech Stack
 
-Clean and simple user interface
+* Backend: Flask (Python)
+* Frontend: HTML, CSS
+* Server: Gunicorn
 
-Deployable on Render
+---
 
-Tech Stack
+## Project Structure
 
-Backend: Flask (Python)
-
-Frontend: HTML, CSS
-
-Server: Gunicorn
-
-Project Structure
+```
 file-upload-app/
 │
 ├── app.py
@@ -34,42 +37,65 @@ file-upload-app/
 │   └── index.html
 ├── static/
 │   └── style.css
-Installation & Setup
-1. Clone Repository
+```
+
+---
+
+## Installation & Setup
+
+### 1. Clone Repository
+
+```bash
 git clone YOUR_REPO_LINK
 cd file-upload-app
-2. Install Dependencies
+```
+
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-3. Run the App
+```
+
+### 3. Run the App
+
+```bash
 python app.py
+```
 
 Open in browser:
 
+```
 http://127.0.0.1:5000
-Deployment (Render)
+```
 
-Push project to GitHub
+---
 
-Go to Render
+## Deployment (Render)
 
-Create a New Web Service
+1. Push project to GitHub
+2. Go to Render
+3. Create a New Web Service
+4. Use the following settings:
 
-Use the following settings:
-
+```
 Build Command: pip install -r requirements.txt
 Start Command: gunicorn app:app
-Important Note
+```
 
-Render uses temporary storage. Use /tmp/uploads for file storage in production.
+---
 
-Future Improvements
+## Important Note
 
-Multiple file upload
+Render uses temporary storage. Use `/tmp/uploads` for file storage in production.
 
-Drag and drop interface
+---
 
-Upload progress bar
+## Future Improvements
 
-Cloud storage integration (AWS S3, Firebase)
+* Multiple file upload
+* Drag and drop interface
+* Upload progress bar
+* Cloud storage integration (AWS S3, Firebase)
+* User authentication
 
-User authentication
+---
